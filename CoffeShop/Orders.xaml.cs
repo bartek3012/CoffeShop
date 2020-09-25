@@ -21,11 +21,13 @@ namespace CoffeShop
         public Orders()
         {
             InitializeComponent();
+            coffees = new List<NewCoffe>();
         }
-
+        private List<NewCoffe> coffees;
         private void AddCoffeButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new NewCoffe());
+            coffees.Add(new NewCoffe());
+            NavigationService.Navigate(coffees[coffees.Count - 1]);
         }
     }
 }

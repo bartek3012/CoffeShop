@@ -19,10 +19,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Select type" FontSize="27" FontFamily="Forte" Margin="10 10 0 -5" />
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Americano ($10)" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Cappuccino ($11)" Grid.Row="1" Grid.Column="1" Margin="0 15 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Latte ($12)" Grid.Row="2" Grid.Column="0" Margin="0 0 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Espresso ($8)" Grid.Row="2" Grid.Column="1" Margin="0 0 0 15"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Americano" Content="Americano ($10)" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15" Click="TypeButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Cappuccino" Content="Cappuccino ($11)" Grid.Row="1" Grid.Column="1" Margin="0 15 0 15" Click="TypeButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Latte" Content="Latte ($12)" Grid.Row="2" Grid.Column="0" Margin="0 0 0 15" Click="TypeButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Espresso" Content="Espresso ($8)" Grid.Row="2" Grid.Column="1" Margin="0 0 0 15" Click="TypeButton_Click"/>
         </Grid>
         <Separator Background="Black"/>
         <Grid>
@@ -36,9 +36,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Select size" FontSize="27" FontFamily="Forte" Margin="10 10 0 -5" />
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Small" Width="120" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Mid (+$2)" Width="120" Grid.Row="1" Grid.Column="1" />
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Big (+$4)" Width="120" Grid.Row="1" Grid.Column="2" Margin="0 0 0 0"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Small" Content="Small" Width="130" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15" Click="SizeButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Mid" Content="Mid (+$2)" Width="130" Grid.Row="1" Grid.Column="1" Click="SizeButton_Click" />
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Big" Content="Big (+$4)" Width="130" Grid.Row="1" Grid.Column="2" Margin="0 0 0 0" Click="SizeButton_Click"/>
         </Grid>
         <Separator Background="Black"/>
         <Grid>
@@ -51,11 +51,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Addition (+$2 for each)" FontSize="27" FontFamily="Forte" Margin="10 10 0 -5" />
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Syrup" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Chocolate" Grid.Row="1" Grid.Column="1" Margin="0 15 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Whipped cream" Grid.Row="2" Grid.Column="0" Margin="0 0 0 15"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Milk" Grid.Row="2" Grid.Column="1" Margin="0 0 0 15"/>
+            <TextBlock Text="Addition (+$2 for each)" FontSize="27" FontFamily="Forte" Margin="10 10 0 -5" Grid.ColumnSpan="2"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" Content="Syrup" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" Content="Chocolate" Grid.Row="1" Grid.Column="1" Margin="0 15 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" Content="Whipped cream" Grid.Row="2" Grid.Column="0" Margin="0 0 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" Content="Milk" Grid.Row="2" Grid.Column="1" Margin="0 0 0 15" Click="AdditionButton_Click"/>
         </Grid>
         <Separator Background="Black" Margin="0 0 0 15"/>
         <Grid>
@@ -65,9 +65,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="-" HorizontalAlignment="Right" Width="60" Grid.Column="1"  VerticalAlignment="Center" Background="DarkRed"/>
-            <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="+"  Grid.Column="3" Width="60" VerticalAlignment="Center" HorizontalAlignment="Left" Background="DarkGreen"/>
-            <TextBlock Text="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="27" FontFamily="Forte" Grid.Column="2"/>
+            <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="-" HorizontalAlignment="Right" Width="60" Grid.Column="1"  VerticalAlignment="Center" Background="DarkRed" Click="QuantityButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="+"  Grid.Column="3" Width="60" VerticalAlignment="Center" HorizontalAlignment="Left" Background="DarkGreen" Click="QuantityButton_Click"/>
+            <TextBlock Text="1" x:Name="QuantityTextBlock" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="27" FontFamily="Forte" Grid.Column="2"/>
             <TextBlock Text="Quantity" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="27" FontFamily="Forte" />
         </Grid>
         <Separator Background="Black" Margin="0 0 0 15"/>

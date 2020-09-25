@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <None Remove="Background.jpg" />
+    <None Remove="credit-card.png" />
     <None Remove="hand.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Background.jpg" />
+    <Resource Include="credit-card.png" />
     <Resource Include="hand.png" />
   </ItemGroup>
 
