@@ -22,12 +22,47 @@ namespace CoffeShop
         {
             InitializeComponent();
             coffees = new List<NewCoffe>();
+            OrderedCoffeesTextBlock = OrdersTextBlock;
+            OrderedCoffeesCostTextBlock = CoffeeCostTextBlock;
         }
         private List<NewCoffe> coffees;
+        static public TextBlock OrderedCoffeesTextBlock { get; set; }
+        static public TextBlock OrderedCoffeesCostTextBlock { get; set; }
+        public int CoffeesNumberOrder { get; set; }
         private void AddCoffeButton_Click(object sender, RoutedEventArgs e)
         {
-            coffees.Add(new NewCoffe());
+            if(CoffeesNumberOrder <= 18)
+            {
+            coffees.Add(new NewCoffe(this));
             NavigationService.Navigate(coffees[coffees.Count - 1]);
+            }
+            else
+            {
+                MessageBox.Show("You can not add more coffees in one order");
+            }
+
+        }
+
+        public void FillTotalPay()
+        {
+            int totalPay = 0;
+            foreach(NewCoffe coffe in coffees)
+            {
+                totalPay += coffe.Price;
+            }
+            AllCostTextBlock.Text = "$" + totalPay;
+        }
+
+        private void DoneButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(CoffeesNumberOrder!=0)
+            {
+                NavigationService.Navigate(new Payment());
+            }
+            else
+            {
+                MessageBox.Show("You have to add coffe to your order");
+            }
         }
     }
 }

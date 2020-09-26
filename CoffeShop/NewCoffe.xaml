@@ -52,10 +52,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Addition (+$2 for each)" FontSize="27" FontFamily="Forte" Margin="10 10 0 -5" Grid.ColumnSpan="2"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Syrup" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15" Click="AdditionButton_Click"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Chocolate" Grid.Row="1" Grid.Column="1" Margin="0 15 0 15" Click="AdditionButton_Click"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Whipped cream" Grid.Row="2" Grid.Column="0" Margin="0 0 0 15" Click="AdditionButton_Click"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" Content="Milk" Grid.Row="2" Grid.Column="1" Margin="0 0 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Syrup" Content="Syrup" Grid.Row="1" Grid.Column="0" Margin="0 15 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Chocolate" Content="Chocolate" Grid.Row="1" Grid.Column="1" Margin="0 15 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="WhippedCream" Content="Whipped cream" Grid.Row="2" Grid.Column="0" Margin="0 0 0 15" Click="AdditionButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" x:Name="Milk" Content="Milk" Grid.Row="2" Grid.Column="1" Margin="0 0 0 15" Click="AdditionButton_Click"/>
         </Grid>
         <Separator Background="Black" Margin="0 0 0 15"/>
         <Grid>
@@ -76,7 +76,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="Next" Grid.Column="1" Background="DarkGreen" Margin="13,0,12,0" Height="50" VerticalAlignment="Top" Click="NextButton_Click"/>
+            <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="Next" Grid.Column="1" Background="DarkGreen"  Height="50" VerticalAlignment="Top" Click="NextButton_Click"/>
             <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Cancel" Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" Background="DarkRed"/>
         </Grid>
     </StackPanel>

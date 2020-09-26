@@ -7,9 +7,25 @@
       mc:Ignorable="d" 
       d:Height="650" d:Width="450"
       Title="Orders">
-
-    <Grid>
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="Your order:" HorizontalAlignment="Center" FontSize="36" FontFamily="Forte" TextAlignment="Center" Margin="10"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="OrdersTextBlock" Height="420" Grid.Row="0" TextWrapping="Wrap" Text="" Grid.Column="0"  HorizontalAlignment="Left" FontSize="17" FontFamily="Forte" TextAlignment="Left" Margin="3 0 0 0"/>
+            <TextBlock x:Name="CoffeeCostTextBlock" Height="420" Grid.Row="0" TextWrapping="Wrap" Text="" Grid.Column="1"  HorizontalAlignment="Center" FontSize="17" FontFamily="Forte" TextAlignment="Center" />
+            <TextBlock Text="Total to pay:" Height="30" Grid.Row="1" TextWrapping="Wrap"  Grid.Column="0"  HorizontalAlignment="Center" FontSize="25" FontFamily="Forte"  Margin="70 0 0 15"/>
+            <TextBlock x:Name="AllCostTextBlock" Height="30" Width="120" Grid.Row="1" TextWrapping="Wrap" Grid.Column="1"  HorizontalAlignment="Center" FontSize="25" FontFamily="Forte" TextAlignment="Center" Margin="-90 0 0 15"/>
+        </Grid>
+        <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="6*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -18,9 +34,11 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock TextWrapping="Wrap" Text="Your order:" Grid.Row="0" Grid.ColumnSpan ="2"  HorizontalAlignment="Center" FontSize="36" FontFamily="Forte" TextAlignment="Center" Margin="10"/>
-        <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Add coffe" Grid.Row="1" Grid.ColumnSpan="2"  VerticalAlignment="Bottom" Width="420" Click="AddCoffeButton_Click"/>
-        <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Done" Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center" Background="DarkGreen"/>
-        <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Cancel" Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" Background="DarkRed"/>
+           
+
+            <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Add coffe" Grid.Row="2" Grid.ColumnSpan="2"  VerticalAlignment="Bottom" Width="420" Click="AddCoffeButton_Click"/>
+        <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Done" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Center" Background="DarkGreen" Click="DoneButton_Click"/>
+        <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Cancel" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Background="DarkRed"/>
     </Grid>
+    </StackPanel>
 </Page>
