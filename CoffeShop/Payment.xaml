@@ -16,10 +16,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Select payment method" FontSize="40" Grid.Row="0" FontFamily="Forte" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button Style="{StaticResource RoundButtonTemplate}"  Grid.Row="1" Height="200" Background="Transparent">
+        <Button Style="{StaticResource RoundButtonTemplate}"  Grid.Row="1" Height="200" Background="Transparent" Click="PayButton_Click">
             <Image Source="/hand.png" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill"/>
         </Button>
-        <Button Style="{StaticResource RoundButtonTemplate}"  Grid.Row="2" Height="200" Background="Transparent">
+        <Button Style="{StaticResource RoundButtonTemplate}"  Grid.Row="2" Height="200" Background="Transparent" Click="PayButton_Click">
             <Image Source="/credit-card.png" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill"/>
         </Button>
 

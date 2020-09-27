@@ -21,13 +21,16 @@ namespace CoffeShop
         public Start()
         {
             InitializeComponent();
-            OrderNumber = 0;
         }
-        public static int OrderNumber { get; private set; }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderNumber++;
+            if (MainWindow.OrderNumber <= 99)
+            {
+                MainWindow.OrderNumber++;
+            }
+            else MainWindow.OrderNumber = 0;
+            
             NavigationService.Navigate(new Orders());
         }
     }

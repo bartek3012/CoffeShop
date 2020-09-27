@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,17 +14,19 @@ using System.Windows.Shapes;
 namespace CoffeShop
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy Finish.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Finish : Page
     {
-        public MainWindow()
+        public Finish()
         {
             InitializeComponent();
-            OrderNumber = 0;
-           MyFrame.NavigationService.Navigate(new Start());
+            NumberOrderTextBlock.Text = MainWindow.OrderNumber.ToString();
         }
-        public static int OrderNumber { get; set; }
 
+        private void FinishButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Start());
+        }
     }
 }

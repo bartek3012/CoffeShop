@@ -1,0 +1,21 @@
+﻿<Page x:Class="CoffeShop.Finish"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CoffeShop"
+      mc:Ignorable="d" 
+      d:Height="680" d:Width="450"
+      Title="Finish" Background="Transparent">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Your number order" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontFamily="Forte"/>
+        <TextBlock Grid.Row="1" x:Name="NumberOrderTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="200" FontFamily="Forte"/>
+        <Button Style="{StaticResource RoundButtonTemplate}" Grid.Row="2" Height="100" Width="300" Content="Finish" FontSize="65" Click="FinishButton_Click"/>
+    </Grid>
+</Page>

@@ -77,7 +77,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Style="{StaticResource RoundButtonTemplate}"  FontSize="30" Content="Next" Grid.Column="1" Background="DarkGreen"  Height="50" VerticalAlignment="Top" Click="NextButton_Click"/>
-            <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Cancel" Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" Background="DarkRed"/>
+            <Button Style="{StaticResource RoundButtonTemplate}" FontSize="30" Content="Cancel" Grid.Column="0"  VerticalAlignment="Bottom" Background="DarkRed" Click="CancelButton_Click"/>
         </Grid>
     </StackPanel>
 </Page>

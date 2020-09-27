@@ -64,5 +64,11 @@ namespace CoffeShop
                 MessageBox.Show("You have to add coffe to your order");
             }
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.OrderNumber--;
+            NavigationService.Navigate(new Start());
+        }
     }
 }

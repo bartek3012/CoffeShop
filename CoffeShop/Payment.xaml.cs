@@ -22,5 +22,10 @@ namespace CoffeShop
         {
             InitializeComponent();
         }
+
+        private void PayButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Finish());
+        }
     }
 }

@@ -19,7 +19,6 @@ namespace CoffeShop
     public partial class NewCoffe : Page
     {
         private string coffeDescription;
-        private string coffeAddition;
         public string FullDescription { get; set; }
         public int Price { get;private set; }
         private SolidColorBrush ownBrown;
@@ -89,6 +88,10 @@ namespace CoffeShop
                 currentOrders.FillTotalPay();
                 NavigationService.Navigate(currentOrders);
             }
+            else
+            {
+                MessageBox.Show("Select size and type");
+            }
             
         }
 
@@ -140,5 +143,9 @@ namespace CoffeShop
             }
         }
 
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(currentOrders);
+        }
     }
 }
